@@ -1,0 +1,30 @@
+<!Doctype html>
+<head>
+<script type="text/javascript">
+function Diff(){
+var da= document.getElementById("da").value;
+var db= document.getElementById("db").value;
+var date1=new Date(da);
+var date2=new Date(db);
+
+var One_day_ms = 1000 * 60 * 60 * 24
+var d1 = date1.getTime()
+var d2 = date2.getTime()
+var diff = Math.abs(d1 - d2)
+document.getElementById("days").value=Math.round(diff/One_day_ms);
+}
+</script>
+</head>
+<body bgcolor="Tomato">
+<center><br>
+<h1 style="font-size: 40px; font-family: cursive;">!!! Difference B/W two dates !!!</h1><br>
+<p style="font-size: 30px; font-family: Georgia;"> Enter 1st Date: <input type="Date" name="da" id="da" />
+<p style="font-size: 30px; font-family: Georgia;"> Enter 2nd Date: <input type="Date" name="db" id="db" />
+<br><br>
+<input type="submit" value="Click here for Answer" onclick="Diff();">
+<br>
+<p style="font-size: 20px; font-family: Georgia;">No of Days: <input type="text" name="days" id="days" />
+</center>
+
+</body>
+</html>
